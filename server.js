@@ -11,8 +11,10 @@ import checkoutRoutes from './routes/checkout.js';
 const app = express();
 dotenv.config();
 
-app.use(cors());
-app.use(express.json());
+
+app.use(cors({
+  origin: "https://e-cornamce-frontend.vercel.app/"
+}));app.use(express.json());
 
 // لتفعيل مجلد الصور
 app.use('/uploads', express.static(path.join(path.resolve(), '/uploads')));
