@@ -4,19 +4,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start": "nodemon server.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "homepage": "https://YaseenDevFS.github.io/E-cornamce",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
@@ -24,7 +14,9 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.17.0",
     "multer": "^2.0.2",
-    "nodemon": "^3.1.10",
     "stripe": "^18.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
