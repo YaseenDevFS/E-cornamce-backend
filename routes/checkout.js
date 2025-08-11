@@ -25,8 +25,8 @@ router.post('/create-checkout-session', async (req, res) => {
       payment_method_types: ['card'],
       mode: 'payment',
       line_items,
-      success_url: 'https://e-cornamce-w.up.railway.app/success',
-      cancel_url: 'https://e-cornamce-w.up.railway.app/cancel',
+      success_url: 'https://e-cornamce-w.up.railway.app//success',
+      cancel_url: 'https://e-cornamce-w.up.railway.app//cancel',
     });
 
     res.json({ id: session.id });

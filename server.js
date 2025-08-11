@@ -13,8 +13,9 @@ dotenv.config();
 
 
 app.use(cors({
-  origin: "https://e-cornamce-frontend.vercel.app/"
-}));app.use(express.json());
+  origin: "https://e-cornamce-frontend.vercel.app"
+}));
+app.use(express.json());
 
 // لتفعيل مجلد الصور
 app.use('/uploads', express.static(path.join(path.resolve(), '/uploads')));
