@@ -1,3 +1,11 @@
-import app from '../server.js';
+import app from './server.js';
 
-export default app;
+const PORT = process.env.PORT || 5000;
+
+app.get("/", (req, res) => {
+  res.send("API is running 🚀");
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
