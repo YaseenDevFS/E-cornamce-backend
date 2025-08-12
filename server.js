@@ -1,4 +1,3 @@
-// server.js (أو api/index.js لو هتحطه في مجلد api)
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
@@ -19,20 +18,19 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// مجلد الصور
+// static folder
 app.use('/uploads', express.static(path.join(path.resolve(), '/uploads')));
 
-// الروترات
+// routes
 app.use('/api/users', userRoute); 
 app.use('/api/admin', adminRoute);
 app.use('/api/products', productRoute);
 app.use('/api/cart', cartRoute);
 app.use('/api', checkoutRoutes);
 
-// اتصال قاعدة البيانات
-mongoose.connect(process.env.MONGODB_URI)
-    .then(() => console.log('MongoDB connected'))
-    .catch(err => console.error('MongoDB connect error:', err));
+// test route
+app.get("/", (req, res) => {
+  res.send("API is running 🚀");
+});
 
-// هنا بنرجع الـapp بدل app.listen()
 export default app;
