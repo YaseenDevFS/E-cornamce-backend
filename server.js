@@ -32,7 +32,7 @@ app.use('/api', checkoutRoutes);
 // اتصال قاعدة البيانات
 mongoose.connect(process.env.MONGODB_URI)
     .then(() => console.log('MongoDB connected'))
-    .catch(err => console.error('MongoDB connection error:', err));
+    .catch(err => console.error('MongoDB connect error:', err));
 
 // هنا بنرجع الـapp بدل app.listen()
 export default app;
